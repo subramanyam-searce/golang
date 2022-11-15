@@ -9,7 +9,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/subramanyam-searce/documentation/dog"
+	"github.com/subramanyam-searce/golang/12-documentation/01-making-documented-code/dog"
 )
 
 func main() {
