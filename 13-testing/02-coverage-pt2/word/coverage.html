@@ -3,7 +3,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<title>01: Go Coverage Report</title>
+		<title>word: Go Coverage Report</title>
 		<style>
 			body {
 				background: black;
@@ -55,7 +55,7 @@
 			<div id="nav">
 				<select id="files">
 				
-				<option value="file0">github.com/subramanyam-searce/golang/13-testing/01/main.go (0.0%)</option>
+				<option value="file0">github.com/subramanyam-searce/golang/13-testing/02-coverage-pt2/word/main.go (100.0%)</option>
 				
 				</select>
 			</div>
@@ -69,34 +69,29 @@
 		</div>
 		<div id="content">
 		
-		<pre class="file" id="file0" style="display: none">// Start with this code. Get the code ready to BET on the code (add benchmarks, examples, tests).
-// Run the following in this order:
-// ● tests
-// ● benchmarks
-// ● coverage
-// ● coverage shown in web browser
-// ● examples shown in documentation in a web browser
-
-package main
+		<pre class="file" id="file0" style="display: none">package word
 
 import (
-        "fmt"
+        "strings"
 
-        "github.com/subramanyam-searce/golang/13-testing/01/dog"
+        "github.com/subramanyam-searce/golang/13-testing/02-coverage-pt2/quote"
 )
 
-type canine struct {
-        name string
-        age  int
+// no need to write an example for this one
+// writing a test for this one is a bonus challenge; harder
+func UseCount(s string) map[string]int <span class="cov8" title="1">{
+        xs := strings.Fields(s)
+        m := make(map[string]int)
+        for _, v := range xs </span><span class="cov8" title="1">{
+                m[v]++
+        }</span>
+        <span class="cov8" title="1">return m</span>
 }
 
-func main() <span class="cov0" title="0">{
-        fido := canine{
-                name: "Fido",
-                age:  dog.Years(10),
-        }
-        fmt.Println(fido)
-        fmt.Println(dog.YearsTwo(20))
+func Count(s string) int <span class="cov8" title="1">{
+        m := UseCount(quote.SunAlso)
+
+        return m[s]
 }</span>
 </pre>
 		
